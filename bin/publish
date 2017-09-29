@@ -1,0 +1,10 @@
+#!/usr/bin/env ruby
+require "bunny";
+conn = Bunny.new("amqp://guest:guest@localhost:5672");
+10.times {
+  conn.start;
+  ch = conn.create_channel;
+  q  = ch.queue("foo_worker", durable: true);
+  q.publish("#{rand(1000..100000)}Hello, everybody!");
+};
+conn.close
