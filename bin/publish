@@ -1,6 +1,6 @@
 #!/usr/bin/env ruby
 require "bunny";
-conn = Bunny.new("amqp://guest:guest@localhost:5672");
+conn = Bunny.new("amqp://guest:guest@localhost:5673");
 10.times {
   conn.start;
   ch = conn.create_channel;

@@ -4,7 +4,7 @@ require 'sneakers/handlers/maxretry'
 Sneakers.configure(heartbeat: 2000,
                    amqp: "amqp://guest"\
                    ":guest"\
-                   "@localhost",
+                   "@localhost:5673",
                    vhost: '/',
                    exchange: 'default',
                    exchange_type: 'topic',

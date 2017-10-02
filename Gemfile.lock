@@ -30,6 +30,7 @@ GEM
     builder (3.1.4)
     bunny (2.7.1)
       amq-protocol (>= 2.2.0)
+    byebug (8.2.5)
     concurrent-ruby (1.0.5)
     erubis (2.7.0)
     ffi (1.9.18)
@@ -95,6 +96,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  byebug
   json
   pg
   puma
